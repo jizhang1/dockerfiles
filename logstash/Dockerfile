@@ -28,7 +28,7 @@ ENV ELASTIC_CONTAINER true
 ENV PATH=/usr/share/logstash/bin:$PATH
 
 # Install logstash-input-mongodb plugin
-RUN curl -L https://github.com/jizhang1/logstash-input-mongodb/releases/download/0.4.2/logstash-input-mongodb-0.4.2.gem -o logstash-input-mongodb-0.4.2.gem | \
+RUN curl -L https://github.com/jizhang1/logstash-input-mongodb/releases/download/0.4.2/logstash-input-mongodb-0.4.2.gem -o logstash-input-mongodb-0.4.2.gem && \
     logstash-plugin install logstash-input-mongodb-0.4.2.gem
 
 # Provide a minimal configuration, so that simple invocations will provide
